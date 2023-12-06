@@ -1,10 +1,30 @@
 public class Triangolo extends Forme {
-    public Triangolo(int latoA, int latoB) {
-        super(latoA, latoB);
+    private int latoA;
+    private int latoB;
+    public Triangolo(  int latoA, int latoB,String nome) {
+        super(nome);
+        this.latoA=latoA;
+        this.latoB=latoB;
     }
- @Override
- public void calcolaArea(int latoA, int latoB){
-     int area = latoA*latoB /2;
-     System.out.println("L area del triangolo è =" + area);
+
+    public int getLatoA() {
+        return latoA;
+    }
+
+    public void setLatoA(int latoA) {
+        this.latoA = latoA;
+    }
+
+    public int getLatoB() {
+        return latoB;
+    }
+
+    public void setLatoB(int latoB) {
+        this.latoB = latoB;
+    }
+
+    @Override
+ public void calcolaArea(){
+     System.out.println("L area del triangolo è =" + getLatoA()*getLatoB() /2);
  }
 }
